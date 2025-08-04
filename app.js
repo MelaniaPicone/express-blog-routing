@@ -14,7 +14,7 @@ app.get('/', (req, res) =>
 });
 
 // Il server rimane in ascolto
-app.listen(port,() => console.log{`Server in ascolto sulla porta ${port}`});
+app.listen(port,() => console.log(`Server in ascolto sulla porta ${port}`));
 
 // File statici
 app.use(express.static('public'));
