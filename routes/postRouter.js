@@ -36,3 +36,8 @@ router.patch('/:id', (req, res) =>
 res.send(`Modifica del post con id ${id}`)
 });
 
+// destroy
+router.delete('/:id', (req, res) =>
+{ const id = req.params.id;
+res.send(`Cancellazione del post con id ${id}`);
+});
