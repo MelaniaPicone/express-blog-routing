@@ -9,7 +9,9 @@ const port = 3000;
 
 // definizione rotta base
 app.get('/', (req, res) =>
-res.console.log("Ciao"));
+{
+  res.send("Il mio blog");
+});
 
 // Il server rimane in ascolto
 app.listen(port,() => {`Server in ascolto sulla porta ${port}`});
