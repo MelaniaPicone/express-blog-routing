@@ -60,4 +60,4 @@ module.exports = {
   update,
   modify,
   destroy
-}
+};

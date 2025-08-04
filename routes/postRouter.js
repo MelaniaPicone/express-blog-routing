@@ -5,42 +5,24 @@ const express = require('express');
 const router = express.Router();
 
 // rotte
+
 // index
-router.get('/', (req, res) =>
-{
-  res.send('Elenco dei posts');
-});
+router.get('/', postController.index);
 
 // show
-router.get('/:id', (req,res) => 
-  { const id = req.params.id;
-res.send(`Dettaglio del post con id ${id}`);
-});
+router.get('/:id', postController.show);
 
-// store
-router.post('/', (req,res) =>
-{ const id = req.params.id;
-res.send('Inserimento nuovo post');
-});
+// create
+router.post('/', postController.store);
 
-// update (modifica totale)
-router.put('/:id', (req, res) =>
-{ const id = req.params.id;
-res.send(`Modifica del post con id ${id}`)
-});
+// update
+router.put('/:id', postController.update);
 
-// modify (modifica parziale)
-router.patch('/:id', (req, res) =>
-{ const id = req.params.id;
-res.send(`Modifica del post con id ${id}`)
-});
+// modify
+router.patch('/:id', postController.modify);
 
-// destroy
-router.delete('/:id', (req, res) =>
-{ const id = req.params.id;
-res.send(`Cancellazione del post con id ${id}`);
-});
-
+// delete
+router.delete('/:id', postController.destroy);
 
 // importo controller
 const postController = require('../controllers/postController.js');
