@@ -5,7 +5,6 @@ const express = require('express');
 const router = express.Router();
 
 // rotte
-
 // index
 router.get('/', (req, res) =>
 {
@@ -41,6 +40,11 @@ router.delete('/:id', (req, res) =>
 { const id = req.params.id;
 res.send(`Cancellazione del post con id ${id}`);
 });
+
+
+// importo controller
+const postController = require('../controllers/postController.js');
+
 
 // esporto router
 module.exports = router;
