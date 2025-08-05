@@ -35,7 +35,8 @@ res.json(post);
 
 // store
 const store = (req, res) => {
-res.send("Nuovo post");
+console.log(req.body);
+res.send("Creazione nuovo post");
 
 };
 
