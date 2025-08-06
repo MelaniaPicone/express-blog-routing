@@ -13,7 +13,7 @@ const postsRouter = require('./routes/postRouter');
 // File statici
 app.use(express.static('public'));
 
-// utilizzo il body parser jason
+// utilizzo il body parser json
 app.use(express.json());
 
 // definizione rotte dei posts

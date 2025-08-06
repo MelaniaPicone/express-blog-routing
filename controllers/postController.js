@@ -35,8 +35,25 @@ res.json(post);
 
 // store
 const store = (req, res) => {
-console.log(req.body);
-res.send("Creazione nuovo post");
+// definizione id del nuovo oggetto
+const newId = post[posts.length - 1].id +1;
+
+// recupero dati del body della richiesta
+const {title, content, image, tags} = req.body;
+
+// nuovo oggetto
+const newPost = {
+id: newId,
+title,
+content,
+image,
+tags
+};
+
+// pusho nuovo oggetto
+posts.push(newPost);
+
+  res.status(201).json(newPost);
 
 };
 
@@ -44,7 +61,23 @@ res.send("Creazione nuovo post");
 const update = (req, res) => {
 const id = parseInt(req.params.id);
 
-res.send(`Modifica totale dei post con id ${id}`);
+// recupero dati passati dal body
+const {
+  title,
+  content,
+  image,
+  tags
+} = req.body
+
+// recupero post con id passato come parametro
+const post = post.find(item => item.id === id);
+
+post.title = title;
+post.content = content;
+post.image = image;
+post.tags = tags;
+
+res.send(post);
 
 };
 
