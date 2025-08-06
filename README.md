@@ -55,3 +55,12 @@
 <b>Bonus</b>
 - Quelli del giorno prima, se non già fatti.<br>
 - In Update, controllare se il parametro si riferisce ad un post esistente, in caso contrario, rispondere con uno stato 404 e un messaggio d’errore, sempre in formato JSON.
+
+<hr>
+
+ <h2 align="center">Express Middleware</h2>
+
+<b>Esercizio</b>
+- Dopo aver completato tutte le operazioni CRUD, completiamo le nostre API inserendo un middleware per la gestione delle rotte non registrate e uno per la gestione degli errori.
+- Se viene chiamato un endpoint inesistente, un middleware dovrà rispondere un messaggio e uno status appropriato.,
+- Se viene generato un errore, un middleware si occuperà di rispondere con un messaggio e uno status appropriato.
