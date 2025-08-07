@@ -4,9 +4,6 @@ const express = require('express');
 // istanza della classe router di express
 const router = express.Router();
 
-// importo controller
-const postController = require('../controllers/postController.js');
-
 // rotte
 
 // index
@@ -26,6 +23,9 @@ router.patch('/:id', postController.modify);
 
 // delete
 router.delete('/:id', postController.destroy);
+
+// importo controller
+const postController = require('../controllers/postController.js');
 
 
 // esporto router
